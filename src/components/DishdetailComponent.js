@@ -51,7 +51,6 @@ class DishDetail extends Component {
     if (dish == null) {
       return <div></div>;
     }
-
     return (
       <div className="container">
         <div className="row">
