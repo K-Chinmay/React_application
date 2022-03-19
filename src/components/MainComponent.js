@@ -6,11 +6,11 @@ import { DISHES } from "../shared/dishes";
 import { COMMENTS } from "../shared/comments";
 import { PROMOTIONS } from "../shared/promotions";
 import { LEADERS } from "../shared/leaders";
+import About from "./AboutComponent";
 import DishDetail from "./DishdetailComponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import { render } from "@testing-library/react";
-// import { Component } from "react/cjs/react.production.min";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 class Main extends Component {
@@ -50,11 +50,16 @@ class Main extends Component {
       );
     };
 
+    const AboutUsPage = () => {
+      return <About leaders={this.state.leaders} />;
+    };
+
     return (
       <div>
         <Header />
         <Switch>
           <Route path="/home" component={HomePage} />
+          <Route path="/aboutus" component={AboutUsPage} />
           <Route
             exact
             path="/menu"
