@@ -26,6 +26,7 @@ export const Dishes = (
         ...state,
         isLoading: false,
         errMess: action.payload,
+        dishes: [],
       };
 
     default:
